@@ -51,6 +51,7 @@ font-size: 14px;
 line-height: 26px;
 color: var(--basic-black);
 background-color: var(--basic-white);
+text-transform: uppercase;
 }
 
 .site-navigation {
@@ -79,4 +80,7 @@ color: var(--basic-black);
 
 .container-advantages {
 	background-color: var(--basic-lightgrey);
+}
+.main-footer {
+	list-style: none;
 }
