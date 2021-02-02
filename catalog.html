@@ -3,14 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+	 <link rel="icon" href="favicon.ico">
 </head>
-<body>
-	<header>
-	<nav>
-			<a href="index.html">
+<body class="page-body">
+	<header class="main-header">
+	<nav class="main-nav">
+			<a class="main-header-logo" href="index.html">
 				<img src="img/logo.png" width="138" height="70" alt="Лого Седона">
 			</a>
-			<ul>
+			<ul class="site-navigation">
 				<li><a href="#">Информация</a></li>
 				<li><a href="#">Фото и Видео</a></li>
 				<li><a href="#">Карта Штата</a></li>
@@ -22,27 +25,46 @@
 		<section>
 			<img src="img/background_catalog.jpg" width="1200" height="217" alt="">
 			<h2>Фильтр жилья</h2>
-			<h3>Инфраструктура:</h3>
+			<fieldset>
+			<legend>Инфраструктура:</legend>
 			<ul>
-			<form action="" method="get"></form>
+			<form action="https://echo.htmlacademy.ru" method="get"></form>
 				<li><input type="checkbox" name="swimpool" id="swimpool-field" checked><label for="swimpool-field">Бассейн</label></li>
 				<li><input type="checkbox" name="parking" id="parking-field"><label for="parking-field">Парковка</label></li>
 				<li><input type="checkbox" name="wifi" id="wifi-field"><label for="wifi-field">Wi-Fi</label></li>
 			</ul>
-			<h3>Тип Жилья</h3>
+			</fieldset>
+
+			<fieldset>
+			<legend>Тип Жилья</legend>
 			<ul>
-				<li><input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field">Гостиница</label></li>
+				<li><input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field">Гостиница</label>
+				</li>
 				<li><input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field">Мотель</label></li>
 				<li><input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field">Апартаменты</label></li>
 			</ul>
-			<h3>Стоимость в сутки (Р):</h3>
-			<table>
+			</fieldset>
+
+			<fieldset class="">
+			<legend>Стоимость в сутки (Р):</legend>
+			<div class="price-control">
+				<label class="min-price">от
+					<input type="text" name="min-price" value="0" placeholder="">
+				</label>
+				<label class="max-price">до
+					<input type="text" name="max-price" value="3000" placeholder="">
+				</label>
+			</div>
+			<div>
+				
+			</div>
+			<!--<table>
 				<tr>
 					<td>от 0</td>
 					<td>до 3000</td>
 				</tr>
 			</table>
-			<!--Место для изменения ценового диапозона (бегунка)
+			--Место для изменения ценового диапозона (бегунка)
 				не понятно как сделать данный элемент-->
 
 			<input type="submit" value="Показать">
@@ -55,8 +77,6 @@
 				<li><a href="#">По типу</a></li>
 				<li><a href="#">По рейтингу</a></li>
 			</ul>
-			<img src="https://via.placeholder.com/150x100" alt="icon up dir">
-			<img src="https://via.placeholder.com/150x100" alt="icon down dir">
 		</section>
 		<section>
 			<img src="img/Amara Resort & Spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
@@ -89,26 +109,31 @@
 			<input type="submit" value="Забронировать">
 		</section>
 	</main>
-	<footer>
-		<section>
+	<footer class="main-footer">
+		<section class="footer-contacts">
 			<h2>Как с нами связаться</h2>
-			<a href="#">#visitSEDONA</a><br>
-			Тел: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+			<a class="footer-adress" href="#">#visitSEDONA</a><br>
+			Тел: <a class="footer-phone" href="tel:+74956660166">+7(495) 666-01-66</a>
 		</section>
-		<section>
+		<section class="footer-social">
 			<h2>Соц.сети</h2>
 			<ul>
-				<li><a href="#">Twitter</a></li>
-				<li><a href="#">Facebook</a></li>
-				<li><a href="#">YouTube</a></li>
+				<li><a class="social-button" href="#">
+				Twitter</a></li>
+				<li><a class="social-button" href="#">
+				Facebook</a></li>
+				<li><a class="social-button" href="#">
+				YouTube</a></li>
 			</ul>
 		</section>
-		<section>
+		<section class="footer-copyright">
 			<p>
 				Website by
-				<img src="img/logo-htmlacademy.png" width="113.98" width="39.78" alt="Лого HTMLacademy">
+				<a class="button" href="https://htmlacademy.ru">
+					<img src="img/logo-htmlacademy.png" width="113.98" height="39.78" alt="Лого HTMLacademy">
+				</a>
 			</p>
 		</section>
 	</footer>
-</body>
+  </body>
 </html>
