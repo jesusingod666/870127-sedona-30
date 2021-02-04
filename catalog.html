@@ -21,20 +21,19 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<section>
-			<img src="img/background_catalog.jpg" width="1200" height="217" alt="">
+	<main class="hotels-main">
+		<div class="filter-bar">
+		<section class="filter">
 			<h2>Фильтр жилья</h2>
 			<fieldset>
 			<legend>Инфраструктура:</legend>
 			<ul>
-			<form action="https://echo.htmlacademy.ru" method="get"></form>
+				<form action="https://echo.htmlacademy.ru" method="get"></form>
 				<li><input type="checkbox" name="swimpool" id="swimpool-field" checked><label for="swimpool-field">Бассейн</label></li>
 				<li><input type="checkbox" name="parking" id="parking-field"><label for="parking-field">Парковка</label></li>
 				<li><input type="checkbox" name="wifi" id="wifi-field"><label for="wifi-field">Wi-Fi</label></li>
 			</ul>
 			</fieldset>
-
 			<fieldset>
 			<legend>Тип Жилья</legend>
 			<ul>
@@ -44,8 +43,7 @@
 				<li><input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field">Апартаменты</label></li>
 			</ul>
 			</fieldset>
-
-			<fieldset class="">
+		<fieldset class="">
 			<legend>Стоимость в сутки (Р):</legend>
 			<div class="price-control">
 				<label class="min-price">от
@@ -55,21 +53,13 @@
 					<input type="text" name="max-price" value="3000" placeholder="">
 				</label>
 			</div>
-			<div>
-				
-			</div>
-			<!--<table>
-				<tr>
-					<td>от 0</td>
-					<td>до 3000</td>
-				</tr>
-			</table>
-			--Место для изменения ценового диапозона (бегунка)
-				не понятно как сделать данный элемент-->
-
-			<input type="submit" value="Показать">
+			<button type="button">Показать</button>
+			</fieldset>
 		</section>
-		<section>
+		</div>
+		<div class="container-search-results">
+		<section class="found">
+			<div class="sorting">
 			<h2>Найдено: 3</h2>
 			<h3>Сортировка:</h3>
 			<ul>
@@ -77,16 +67,19 @@
 				<li><a href="#">По типу</a></li>
 				<li><a href="#">По рейтингу</a></li>
 			</ul>
+			</div>
 		</section>
-		<section>
+		<section class="search-results">
+			<div class="amara-resort">
 			<img src="img/Amara Resort & Spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
 			<h2>Amara Resort & Spa</h2>
 			<p>
 				Гостиница 	от 4000 Р.
 			</p>
-			<p>Рейтинг 8,5<p>
-			<input type="submit" value="Подробнее">
-			<input type="submit" value="Забронировать">
+			<p>Рейтинг 8,5</p>
+			<button class="button" type="button">Подробнее</button>
+			<button class="button" type="button">Забронировать</button>
+			</div>
 		</section>
 		<section>
 			<img src="img/Desert Quail Inn.jpg" width="135" height="90" alt="Desert Quail Inn">
@@ -95,8 +88,8 @@
 				Мотель от 3000 Р.
 			</p>
 			<p>Рейтинг 8,9<p>
-			<input type="submit" value="Подробнее">
-			<input type="submit" value="Забронировать">
+			<button class="button" type="button">Подробнее</button>
+			<button class="button" type="button">Забронировать</button>
 		</section>
 		<section>
 			<img src="img/Villas at Poco Diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
@@ -105,9 +98,10 @@
 				Апартаменты от 2000 Р.
 			</p>
 			<p>Рейтинг 9,2<p>
-			<input type="submit" value="Подробнее">
-			<input type="submit" value="Забронировать">
+			<button class="button" type="button">Подробнее</button>
+			<button class="button" type="button">Забронировать</button>
 		</section>
+		</div>
 	</main>
 	<footer class="main-footer">
 		<section class="footer-contacts">

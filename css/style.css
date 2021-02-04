@@ -77,6 +77,14 @@ img {
 
 .site-navigation a {
 	color: var(--basic-black);
+	text-decoration: none;
+}
+
+.title-img {
+	background-image: url("../img/background\ photo.jpg");
+	background-repeat: no-repeat;
+	background-size: 1200px 509px;
+	text-align: center;
 }
 
 .title-text {
@@ -96,13 +104,13 @@ img {
 	justify-self: center;
 }
 
- /* Adventages */
+ /* Features */
  
-.main{
+.features-main{
 	color: var(--basic-white);
 	background-color: var(--basic-lightblue);
 	display: grid;
-	grid-template-columns: 400px 800px;
+	grid-template-columns: 400px 1fr;
 	height: 256px;
 }
 
@@ -110,7 +118,7 @@ img {
 	color: var(--basic-white);
 	background-color: var(--basic-lightblue);
 	display: grid;
-	grid-template-columns: 800px 400px;
+	grid-template-columns: 800px 1fr;
 	height: 256px;
 }
 
@@ -161,9 +169,52 @@ img {
 	line-height: 24px;
 }
 
+ /* Footer*/
 
 .main-footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-
 }
+
+.footer-contacts a{
+	text-decoration: none;
+	color: var(--basic-black);
+}
+
+.footer-social li {
+	list-style: none;
+}
+
+
+
+
+/* Catalog */
+
+.hotels-main {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.filter-bar {
+	background-image: url("../img/background_catalog.jpg");
+	background-repeat:no-repeat ;
+	background-size:100%;
+}
+
+.hotels-main .filter {
+	display: grid;
+}
+
+.sorting li {
+	list-style: none;
+}
+
+.sorting a {
+	text-decoration: none;
+}
+
+.hotels-main .container-search-results {
+	display: grid;
+}
+
+
