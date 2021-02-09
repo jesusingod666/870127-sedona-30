@@ -9,57 +9,60 @@
 </head>
 <body class="page-body">
 	<header class="main-header">
-	<nav class="main-nav">
-			<a class="main-header-logo" href="index.html">
+		<nav class="main-nav">
+			<a class="main-header-logo">
 				<img src="img/logo.png" width="138" height="70" alt="Лого Седона">
 			</a>
-			<ul class="site-navigation">
-				<li><a href="#">Информация</a></li>
-				<li><a href="#">Фото и Видео</a></li>
-				<li><a href="#">Карта Штата</a></li>
-				<li><a href="#">Гостиницы</a></li>
-			</ul>
+			<div class="main-header-bar">
+			<div class="main-navigation-wrapper">
+				<div class="container">
+				<ul class="site-navigation">
+					<li><a href="index.html">Информация</a></li>
+					<li><a href="#">Фото и Видео</a></li>
+					<li><a href="#">Карта Штата</a></li>
+					<li><a href="#">Гостиницы</a></li>
+				</ul>
+				</div>
+			</div>
+			</div>
 		</nav>
 	</header>
 	<main class="hotels-main">
 		<div class="filter-bar">
 		<section class="filter">
 			<h2>Фильтр жилья</h2>
-			<fieldset>
-			<legend>Инфраструктура:</legend>
-			<ul>
-				<form action="https://echo.htmlacademy.ru" method="get"></form>
-				<li><input type="checkbox" name="swimpool" id="swimpool-field" checked><label for="swimpool-field">Бассейн</label></li>
-				<li><input type="checkbox" name="parking" id="parking-field"><label for="parking-field">Парковка</label></li>
-				<li><input type="checkbox" name="wifi" id="wifi-field"><label for="wifi-field">Wi-Fi</label></li>
-			</ul>
-			</fieldset>
-			<fieldset>
-			<legend>Тип Жилья</legend>
-			<ul>
-				<li><input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field">Гостиница</label>
-				</li>
-				<li><input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field">Мотель</label></li>
-				<li><input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field">Апартаменты</label></li>
-			</ul>
-			</fieldset>
-		<fieldset class="">
+			<div class="container-filter">
+				<legend>Инфраструктура:</legend>
+				<ul>
+					<form action="https://echo.htmlacademy.ru" method="get"></form>
+						<li><input type="checkbox" name="swimpool" id="swimpool-field" checked><label for="swimpool-field">Бассейн</label></li>
+						<li><input type="checkbox" name="parking" id="parking-field"><label for="parking-field">Парковка</label></li>
+						<li><input type="checkbox" name="wifi" id="wifi-field"><label for="wifi-field">Wi-Fi</label></li>
+					</ul>
+				</fieldset>
+				<fieldset class="type-housing">
+					<legend>Тип Жилья</legend>
+					<ul>
+						<li><input type="checkbox" name="hotel" id="hotel-field" checked><label for="hotel-field">Гостиница</label></li>
+						<li><input type="checkbox" name="motel" id="motel-field" checked><label for="motel-field">Мотель</label></li>
+						<li><input type="checkbox" name="apartaments" id="apartaments-field" checked><label for="apartaments-field">Апартаменты</label></li>
+					</ul>
+				</fieldset>
+		<fieldset class="price">
 			<legend>Стоимость в сутки (Р):</legend>
 			<div class="price-control">
 				<label class="min-price">от
-					<input type="text" name="min-price" value="0" placeholder="">
-				</label>
+					<input type="text" name="min-price" value="0" placeholder=""></label>
 				<label class="max-price">до
-					<input type="text" name="max-price" value="3000" placeholder="">
-				</label>
-			</div>
+					<input type="text" name="max-price" value="3000" placeholder=""></label>
 			<button type="button">Показать</button>
+			</div>
 			</fieldset>
+		</div>
 		</section>
 		</div>
-		<div class="container-search-results">
-		<section class="found">
-			<div class="sorting">
+		<section class="container-search-results">
+			<div class="found">
 			<h2>Найдено: 3</h2>
 			<h3>Сортировка:</h3>
 			<ul>
@@ -69,12 +72,13 @@
 			</ul>
 			</div>
 		</section>
+		<div class="all-items">
 		<section class="search-results">
 			<div class="amara-resort">
 			<img src="img/Amara Resort & Spa.jpg" width="135" height="90" alt="Amara Resort & Spa">
 			<h2>Amara Resort & Spa</h2>
 			<p>
-				Гостиница 	от 4000 Р.
+				Гостиница от 4000 Р.
 			</p>
 			<p>Рейтинг 8,5</p>
 			<button class="button" type="button">Подробнее</button>

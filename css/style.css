@@ -214,30 +214,30 @@ img {
 /* Catalog */
 
 .hotels-main {
-	display: grid;
-	grid-template-columns: 1fr;
+	
+	/*display: grid;
+	grid-template-columns: 1fr;*/
 }
 
-.filter-bar {
+.container-filter {
+	display: flex;
+	justify-content: space-between;
 	background-image: url("../img/background_catalog.jpg");
-	background-repeat: no-repeat ;
-	background-size: 100%;
+	background-repeat: no-repeat;
+	background-size: 1200px 217px;
+	
 }
 
-.hotels-main .filter {
-	display: grid;
-}
-
-.sorting li {
+.container-search-results .found {
+	display: flex;
 	list-style: none;
 }
 
-.sorting a {
+.container-search-results a {
 	text-decoration: none;
+	list-style: none;
 }
-
-.hotels-main .container-search-results {
-	display: grid;
+.all-items {
+	display: flex;
+	flex-direction: column;
 }
-
-
