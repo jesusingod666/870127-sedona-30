@@ -47,8 +47,11 @@
 
 
 .page-body {
+	box-sizing: content-box;
 	margin: 0px;
 	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	box-sizing: border-box;
 	width: 1200px;
 	font-family: PT Sans;
@@ -56,8 +59,8 @@
 	font-weight: normal;
 	line-height: 21px;
 	text-transform: uppercase;
-	color: var(--basic-lightblack)
-	
+	color: var(--basic-lightblack);
+	box-shadow: 0px 5px 15px;
 }
 
 img {
@@ -86,7 +89,7 @@ img {
 	justify-self: center;
 	width: 138px;
 	height: 70px;
-	margin-bottom: -15px;
+	margin-bottom: -12px;
 }
 
 .main-navigation-wrapper {
@@ -97,11 +100,22 @@ img {
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
 	list-style: none;
 	font-size: 14px;
 	line-height: 26px;
-	font-weight: bold;
+	font-weight: 700;
+}
+
+.site-navigation li:first-child {
+	margin-right: 134px;
+}
+
+.site-navigation li:nth-last-child(3) {
+	margin-right: 418px;
+}
+
+.site-navigation li:nth-last-child(2) {
+	margin-right: 147px;
 }
 
 .site-navigation a {
@@ -129,25 +143,22 @@ img {
 	padding: 77px 371px 80px 371px;
 }
 
-.title-text {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	/*display: grid;
-	grid-column: 1 / -1;*/
-}
 
-.title-text h2 {
+
+.title-text h1 {
 	font-size: 21px;
 	line-height: 26px;
-	justify-self: center;
+	text-align: center;
 	font-weight: 700;
+	margin-top: 43px;
 }
 
 .title-text p {
 	font-size: 14px;
 	line-height: 26px;
-	justify-self: center;
+	text-align: center;
+	margin-top: 16px;
+	margin-bottom: 51px;
 }
 
 .container {
@@ -158,65 +169,115 @@ img {
 
  /* Features */
  
-.features-main{
-	color: var(--basic-white);
-	background-color: var(--basic-lightblue);
+.real-city,
+.devil-bridge {
 	display: flex;
-	display: grid;
-	grid-template-columns: 400px 1fr;
-	height: 256px;
+	justify-content: center;
+	align-items: center;
 }
 
-.features-mirror .main {
-	color: var(--basic-white);
+.real-city-text,
+.devil-bridge-text {
+	margin: 0;
+	padding: 0;
+	width: 33.33%;
 	background-color: var(--basic-lightblue);
-	display: grid;
-	grid-template-columns: 800px 1fr;
-	height: 256px;
+	color: var(--basic-white);
+	min-height: 256px;
+}	
+
+.real-city-img,
+.devil-bridge-img {
+	width: 66.66%;
+	min-height: 256px;
 }
 
-.main-item h2 {
+.devil-bridge-img {
+	order: -1;
+}
+
+.real-city-img img,
+.devil-bridge-img img {
+	width: 100%;
+	display: block;
+}
+
+.real-city-title, 
+.devil-bridge-title {
+	margin: 0;
+	padding: 0;
+	padding-top: 47px;
+	padding-bottom: 25px;
 	font-size: 21px;
 	line-height: 21px;
+	text-align: center;
+	font-weight: 700;
 }
 
-.main-item p {
-	font-size: 14px;
+.real-city-descript, 
+.devil-bridge-descript {
+	margin: 0; 
+	padding: 0;
+	padding-bottom: 23px;
+	padding-left: 21px;
+	padding-right: 21px;
 	line-height: 21px;
+	text-align: center;
 }
 
-.features-list {
+.container .features-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	padding-top: 60px;
+	padding-bottom: 82px;
 	list-style: none;
+	justify-content: space-around;
+	text-align: center;
 }
 
-.features-item h3 {
-	font-size: 21px;
+.features-list .title { 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size:  21px;
 	line-height: 21px;
+	font-weight: 700;
 }
-.features-item p {
+
+.features-list .descript-text {
 	font-size: 14px;
 	line-height: 21px;
+	font-weight: 400;
 }
 
-.features .features-list {
+.container-grey {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	text-align: center;
-	padding-top: 60px;
-	padding-bottom: 82px;
-	/*display: grid;
-	grid-template-columns: 1fr 1fr 1fr;*/
+	background-color: var(--basic-lightgrey-bg);
+	align-items: center;
 }
 
-.container-features .features {
-	display: flex;
-	justify-content: space-around;
-	/*display: grid;
-	grid-template-columns: 1fr 1fr 1fr;*/
-	background-color: var(--basic-lightgrey-bg);
+.features-list-grey {
 	list-style: none;
+	text-align: center;
+	padding-top: 47px;
+	padding-bottom: 54px;
 }
+
+.features-list-grey .title-grey {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: 700;
+}
+
+.features-list-grey .descript-text-grey {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+
 
 /*Booking*/
 
@@ -227,16 +288,24 @@ img {
 .search-block {
 	display: block;
 	text-align: center;
+	padding-top: 58px;
+	padding-bottom: 4px;
 }
 
 .search-block h2 {
 	font-size: 30px;
 	line-height: 24px;
+	margin: 0 0 24px;
+	font-weight: 700;
+	text-align: center;
 }
 
 .search-block p {
+	margin: 0 auto 47px;
+	padding: 0;
 	font-size: 14px;
 	line-height: 24px;
+	text-align: center;
 }
 
 .button-head {
