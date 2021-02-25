@@ -29,22 +29,68 @@
 			</nav>
 		</header>
 	<main>
-		<div class="container">
+		<div class="container-title">
 				<div class="title-img">
-					<img src="img/welcome.png" width="456px" height="350px" alt="Приветственная вывеска">
+					<img src="img/welcome.png" width="456" height="350" alt="Приветственная вывеска">
 				</div>
 				<section class="title-text">
 						<h1>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
 						<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 				</section>
+				<section>
+					<div class="container">
+						<ul class="features">
+							<li class="blue">
+								<span class="title">Настоящий городок</span>
+								<span>— №1 —</span>
+								<p>Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
+							</li>
+							<li>
+								<img src="img/image.jpg" width="800" height="256" alt="">
+							</li>
+							<li class="white">
+								<span class="title">Жилье</span>
+								<p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
+							</li>
+							<li class="white">
+								<span class="title">Еда</span>
+								<p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+							</li>
+							<li class="white"> 
+								<span class="title">Сувениры</span>
+								<p>Не только китайского, но и местного<br> производства!</p>
+							</li>
+							<li>
+								<img src="img/image_canion.jpg" width="800" height="256" alt="">
+							</li>
+							<li class="blue">
+								<span class="title">Там есть Мост дьявола</span>
+								<span>— №2 —</span>
+								<p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+							</li>
+							<li class="grey">
+								<span class="title">Небольшая площадь</span>
+								<span>— №3 —</span>
+								<p>все достопримечательности<br> находятся очень близко</p>
+							</li>
+							<li class="grey">
+								<span class="title">красивая дорога</span>
+								<span>— №4 —</span>
+								<p>ехать в седону из лас-вегаса совсем<br> не скучно!</p>
+							</li>
+							<li class="grey">
+								<span class="title">мало туристов</span>
+								<span>— №5 —</span>
+								<p>большинство едет в гранд каньон<br> и толпится там</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!--<section class="title-text">
+						<h1>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+						<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+				</section>
 				<section class="real-city">
-					<!--<ul class="features-list main-list">
-						<li class="features-item main-item">
-							<h2 class="real-city">Настоящий<br>городок</h2>
-							<p class="features-number">— №1 —</p>
-							<p class="features-descript">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-						</li>
-					</ul>-->
 					<div class="real-city-text">
 						<p class="real-city-title">Настоящий<br>городок</p>
 						<p class="real-city-descript">— №1 —</p>
@@ -75,19 +121,6 @@
 						</ul>
 					</div>
 				</section>
-				<!--<div class="features-mirror">
-					<section class="features main">
-						<img src="img/image_canion.jpg" width="800" height="256" alt="">
-						<ul class="features-list main-list">
-							<li class="features-item main-item">
-								<h2>Там есть Мост дьявола</h2>
-								<p>— №2 —<br>
-								Да, по нему можно пройти! Если конечно вы осмелитесь
-								</p>
-							</li>
-						</ul>
-					</section>
-				</div>-->
 				<section class="devil-bridge">
 					<div class="devil-bridge-text">
 						<p class="devil-bridge-title">Там есть Мост дьявола</p>
@@ -122,16 +155,16 @@
 							</li>
 						</ul>
 					</div>
-				</section>
+				</section>-->
 				<section class="search-block">
 					<h1 class="visually-hidden">Поиск отеля</h1>
 					<h2>Заинтересовались?</h2>
 					<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-					<form action="https://echo.htmlacademy.ru" method="POST" class="seatch-form">
+					<form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
 						<button class="button-head" tabindex="0">Поиск гостиницы в седоне</button>
 						<div class="form-input-blocks">
 							<div class="arrival-date form-input-block">
-								<label for="arrival-input" class="label-desript">Дата заезда:</label>
+								<label for="arrival-input" class="label-descript">Дата заезда:</label>
 								<input type="text" id="arrival-input" name="arrival-date" placeholder="24 Апреля 2017" class="form-input form-input-date">
 								<button type="button" class="date-input">
 									<span class="visually-hidden">Выбрать дату</span>
@@ -148,11 +181,11 @@
 										16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 
 										9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 
 										9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9"/>
-									</svg>	
+									</svg>
 								</button>
 							</div>
 							<div class="departure-date form-input-block">
-								<label for="departure-input" class="label-desript">Дата выезда:</label>
+								<label for="departure-input" class="label-descript">Дата выезда:</label>
 								<input type="text"  id="departure-input" name="departure-date" placeholder="4 июля 2017" class="form-input form-input-date">
 								<button type="button" class="date-input">
 									<span class="visually-hidden">Выбрать дату</span>
@@ -174,7 +207,7 @@
 							</div>
 							<div class="amount-persons form-input-block">
 								<div class="amount-persons-block">
-									<label for="adult" class="label-desript">Взрослые:</label>
+									<label for="adult" class="label-descript">Взрослые:</label>
 									<button type="button" class="amount-persons-button input-button-minus" id="amount_adult_minus">
 										<span class="visually-hidden">Количество взрослых - понижение</span>
 									</button>
@@ -184,7 +217,7 @@
 									</button>
 								</div>
 								<div class="amount-persons-block">
-									<label for="children" class="label-desript">Дети:</label>
+									<label for="children" class="label-descript">Дети:</label>
 									<button type="button" class="amount-persons-button input-button-minus" id="amount_children_minus">
 										<span class="visually-hidden">Количество детей - понижение</span>
 									</button>
@@ -197,9 +230,9 @@
 							<div class="submit">
 								<button type="button" class="submit-button">Найти</button>
 							</div>
-							<div>
 						</div>
-					</section>
+					</form>	
+				</section>
 				<section>
 					<img src="img/map.png" width="1199" height="594" alt="Карта">
 				</section>
