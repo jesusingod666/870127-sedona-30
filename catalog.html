@@ -29,54 +29,12 @@
 		</nav>
 	</header>
 	<main class="hotels-main">
-		<!--<section class="filter-block">
-			<h2 class="visually-hidden">Фильтр отелей</h2>
-			<form action="https://echo.htmlacademy.ru" method="POST" class="filter-form">
-				<div class="infrastructure">
-					<p class="filter-head">Инфраструктура:</p>
-					<input type="checkbox" name="pool" id="pool" checked>
-					<label for="pool" class="filter-label">Бассейн</label>
-					<input type="checkbox" name="parking" id="parking">
-					<label for="parking" class="filter-label">Парковка</label>
-					<input type="checkbox" name="wifi" id="wifi">
-					<label for="wifi" class="filter-label">Wi-Fi</label>
-				</div>
-				<div class="type-housing">
-					<p class="filter-head">Тип Жилья:</p>
-					<input type="checkbox" name="hotel" id="hotel" checked>
-					<label for="hotel" class="filter-label">Гостиница</label>
-					<input type="checkbox" name="motel" id="motel" checked>
-					<label for="motel" class="filter-label">Мотель</label>
-					<input type="checkbox" name="apartments" id="apartments" checked>
-					<label for="apartments" class="filter-label">Апартаменты</label>
-				</div>
-				<fieldset class="price-filter">
-					<legend>Стоимость в сутки (Р):</legend>
-					<div class="range-filter">
-						<div class="range-controls">
-							<div class="scale">
-								<div class="bar"></div>
-							</div>
-							<div class="toggle toggle-min"></div>
-            				<div class="toggle toggle-max"></div>
-						</div>
-						<div class="price-controls">
-							<label class="min-price">
-								от <input type="number" name="min-price" value="0">
-							</label>
-							<label class="max-price">
-								до <input type="number" name="max-price" value="4000">
-							</label>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-		</section>-->
 		<div class="filter-bar">
 			<section class="filter">
 				<h2 class="visually-hidden">Фильтр жилья</h2>
-				<form action="https://echo.htmlacademy.ru" method="get">
-					<div class="container-filter">
+				<div class="container-filter">
+					<div class="input__blocks">
+					<form action="https://echo.htmlacademy.ru" method="get"></form>
 						<fieldset class="infrastructure">
 							<legend>Инфраструктура:</legend>
 								<ul>
@@ -95,7 +53,7 @@
 								</ul>
 						</fieldset>
 						<fieldset class="type-housing">
-							<legend>Тип Жилья</legend>
+							<legend>Тип Жилья:</legend>
 								<ul>
 									<li>
 										<input type="checkbox" name="hotel" id="hotel-field" class="visually-hidden filter-input" checked>
@@ -111,26 +69,29 @@
 									</li>
 								</ul>
 						</fieldset>
-						<fieldset class="price-filter">
-							<legend>Стоимость в сутки (Р):</legend>
-							<div class="range-filter">
-								<div class="range-controls">
-									<div class="scale">
-										<div class="bar"></div>
+						</div>
+						<div class="container-price">
+							<fieldset class="price-filter">
+								<legend>Стоимость в сутки (Р):</legend>
+								<div class="range-filter">
+									<div class="range-controls">
+										<div class="scale">
+											<div class="bar"></div>
+										</div>
+										<div class="toggle toggle-min" tabindex="0"></div>
+										<div class="toggle toggle-max" tabindex="0"></div>
 									</div>
-									<div class="toggle toggle-min"></div>
-            						<div class="toggle toggle-max"></div>
+									<div class="price-controls">
+										<label class="min-price">
+											от <input type="number" name="min-price" value="0">
+										</label>
+										<label class="max-price">
+											до <input type="number" name="max-price" value="4000">
+										</label>
+										<button type="submit" class="submit__button">Показать</button>
+									</div>
 								</div>
-								<div class="price-controls">
-									<label class="min-price">
-										от <input type="number" name="min-price" value="0">
-									</label>
-									<label class="max-price">
-										до <input type="number" name="max-price" value="4000">
-									</label>
-								</div>
-							</div>
-						</fieldset>
+							</fieldset>
 						</div>
 					</form>
 			</section>	
@@ -140,6 +101,7 @@
 			<div class="sorting">
 				<div class="sorting__list">
 					<span>Найдено: 3</span>
+					<span>Сортировка:</span>
 					<ul>
 						<li><a class="sorting__list--active">По цене</a></li>
 						<li><a href="#">По типу</a></li>

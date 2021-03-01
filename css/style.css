@@ -89,7 +89,8 @@ img {
 	justify-self: center;
 	width: 138px;
 	height: 70px;
-	margin-bottom: -12px;
+	margin-bottom: -16px;
+	z-index: 1;
 }
 
 .main-navigation-wrapper {
@@ -104,6 +105,8 @@ img {
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 700;
+	margin: 0;
+	padding: 0;
 }
 
 .site-navigation li:first-child {
@@ -141,10 +144,9 @@ img {
 	background-repeat: no-repeat;
 	background-size: 1200px 509px;
 	text-align: center;
-	padding: 5px 10px;
+	padding: 77px 10px 80px;
+	clip-path: polygon(0 80%, 0% 0%, 100% 0%, 100% 80%, 80% 88%, 80% 80%, 50% 97%, 20% 80%, 20% 88%);
 }
-
-
 
 .title-text h1 {
 	font-size: 21px;
@@ -224,16 +226,16 @@ img {
 	margin-bottom: 28px;
 }
 
-.features__item--white:nth-of-type(1)::before {
-	content: url();
-}
-
-.features__item--white:nth-of-type(2)::before {
-	content: url();
-}
-
 .features__item--white:nth-of-type(3)::before {
-	content: url();
+	content: url(../img/icon-1.svg);
+}
+
+.features__item--white:nth-of-type(4)::before {
+	content: url(../img/icon-3.svg);
+}
+
+.features__item--white:nth-of-type(5)::before {
+	content: url(../img/icon-2.svg);
 }
 
 .features__item--grey {
@@ -615,58 +617,121 @@ img {
 	background-image: url(../img/background_catalog.jpg);
 }
 
+.container-price {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+}
 
 .price-filter {
-	display: inline-block;
 	margin: 0;
 	padding: 0;
 	border: none;
 }
 
 .range-filter {
-	display: block;
+
 	width: 316px;
 	margin-top: 10px;
 }
 
 .range-controls {
 	position: relative;
-	margin-bottom: 20px;
+	order: 2;
 }
 
 .range-controls .scale {
 	width: 316px;
 	height: 2px;
-	background: var(--basic-white);
-	opacity: 0.3;
+	background: red;
+	z-index: 1;
 }
 
 .range-controls .bar {
 	width: 248px;
 	height: 2px; 
-	background:var(--basic-white);
+	background-color: green;
+	z-index: 2;
 }
 
 .range-controls .toggle {
 	position: absolute;
-	top: 100;
-	left: 0;
+  	top: -12px;
+  	left: 0;
 	width: 4px;
-  	height: 4px;
-  	padding: 0;
-  	border: 8px solid var(--basic-white);
-  	background-color: var(--basic-lightgrey-for-togle);
- 	border-radius: 50%;
+	height: 4px;
+	padding: 0;
+	border: 8px solid #ffffff;
+	background-color: #ababab;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	cursor: pointer;
+}
 
+.range-controls .toggle-min {
+	left: 1px;
+}
+
+.range-controls .toggle-max {
+	left: 233px;
+}
+
+
+.price-controls {
+	display: flex;
+	justify-content: flex-start;
+  }
+
+.price-controls label {
+	text-transform: uppercase;
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 14px;
+	color: var(--basic-white);
+  }
+
+
+.price-controls input {
+	width: 157px;
+	text-align: center ;
+	font-family: inherit;
+	font-size: inherit;
+	background: transparent;
+	color: var(--basic-white);
+	border: 2px solid var(--basic-white);
+	border-radius: 2px;
+}
+
+.submit__button {
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: var(--basic-white);
+	border: 2px solid var(--basic-white);
+	border-radius: 10%;
+	background: transparent;
+	width: 137px;
+	min-height: 36px;
 }
 
 .container-filter {
 	display: flex;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	background-image: url("../img/background_catalog.jpg");
 	background-repeat: no-repeat;
 	background-size: 1200px 217px;
+	min-height: 217px;
 	list-style: none;
+	padding: 0 72px;
+}
+
+
+.input__blocks {
+	display: flex;
+	justify-content: flex-start;
 }
 
 
@@ -686,6 +751,7 @@ img {
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-white);
+	padding-bottom: 23px;
 }
 
 .filter-input + label::before {
@@ -700,14 +766,14 @@ img {
   }
 
 .filter-input:checked + label::after {
-	content: "";
+	content: url(../img/Shape.svg);
 	position: absolute;
-	background-image: url(../img/Shape.svg);
+	
 	top: 0px;
 	left: -38px;
 	width: 22px;
 	height: 17px;
-	z-index: 1;
+
 }
 
 
@@ -715,10 +781,13 @@ img {
 .type-housing {
 	margin: 0;
 	padding: 0;
-	padding-left: 72px;
 	border: none;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.infrastructure {
+	padding-right: 119px;
 }
 
 .infrastructure legend,
@@ -728,6 +797,12 @@ img {
 	line-height: 21px;
 	font-weight: 700;
 	color: var(--basic-white);
+	padding-top: 7.5px;
+}
+
+.infrastructure legend,
+.type-housing legend {
+	padding-bottom: 24px;
 }
 
 .content-list {
@@ -907,10 +982,11 @@ img {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  padding: 0 72px;
+  	padding: 0 72px;
+	
 }
 
-.found-hotels {
+.sorting__list span:first-child {
 	margin: 0;
 	font-size: 21px;
 	line-height: 26px;
@@ -919,26 +995,28 @@ img {
 	color: var(--basic-black);
 }
 
-.sorting-r {
+
+.sorting__list span:nth-of-type(2) {
 	margin: 0;
 	font-size: 12px;
 	line-height: 18px;
-	margin-top: 30px;
 	margin-right: 40px;
-	color: var(--basic-black);	
+	color: var(--basic-black);
 }
 
-.sorting-list {
+.sorting__list {
 	margin: 0;
 	padding: 0;
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	list-style: none;
 	font-size: 12px;
-	margin-top: 32px;
 	margin-right: 40px;
+	list-style: none;
 }
 
-.sorting-link {
+.sorting__list a:not(.sorting__list--active) {
 	font-size: 12px;
 	line-height: 18px;
 	text-decoration: none;
@@ -946,6 +1024,38 @@ img {
 	opacity: 0.3;
 	margin-right: 33px;
 	border-bottom: 1px dotted var(--basic-lightblue);
+}
+
+.sorting__list--active {
+	font-size: 12px;
+	line-height: 18px;
+	color: var(--basic-lightblue);
+	padding-right: 32px;
+}
+
+.sorting__list a:hover, 
+.sorting__list a:focus {
+	color: var(--basic-lightblue);
+	opacity: 1;
+}
+
+.sorting__list a:active {
+	color: var(--basic-black);
+	opacity: 1;
+	border: none;
+}
+
+.sorting__list ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+
+.sorting__list a {
+	text-decoration: none;
 }
 
 .sorting-list li:last-child .sorting-link {
@@ -987,26 +1097,24 @@ img {
 
 .sorting-button:last-child {
 	margin-left: 12px;
+	border: none;
 }
 
-.sorting-button:not(.button-up):hover svg,
-.sorting-button:not(.button-up):focus svg {
+.sorting-button:not(.button-up):hover path,
+.sorting-button:not(.button-up):focus path {
 	fill: var(--basic-black);
+	border: none;
+}
+
+.sorting-button:not(.button-up):active path {
+	fill: var(--basic-lightblue);
 }
 
 .container-search-results {
 	list-style: none;
 }
 
-.container-search-results .found {
-	display: flex;
-	list-style: none;
-}
 
-.container-search-results a {
-	text-decoration: none;
-	list-style: none;
-}
 
 /*.all-items {
 	display: flex;
