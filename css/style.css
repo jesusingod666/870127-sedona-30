@@ -36,8 +36,10 @@
   --basic-lightgrey-input-bg: #F2F2F2;
   --basic-lightrey-input-bg-hover: #EBEBEB;
   --basic-outline-input: #e5e5e5;
+ 
 
-  --basic-white-bg: rgba(255, 255, 255, 0.9)
+  --basic-white-bg: rgba(255, 255, 255, 0.9);
+  --basic-white-bg-second: rgba(255, 255, 255, 0.3);
   
 }
 
@@ -363,16 +365,14 @@ img {
 }
 
 .search-block {
-	display: block;
-	text-align: center;
-	padding-top: 58px;
-	padding-bottom: 4px;
+	min-height: 292px;
 }
 
 .search-block h2 {
 	font-size: 30px;
 	line-height: 24px;
 	margin: 0 0 24px;
+	padding-top: 58px;
 	font-weight: 700;
 	text-align: center;
 }
@@ -386,16 +386,23 @@ img {
 }
 
 .search-form {
-	margin: 0 auto;
+	position: absolute;
+	background-color: var(--basic-white);
+	box-sizing: border-box;
 	width: 568px;
-	position: relative;
+	height: 395px;
+	box-shadow: 0px 7px 15px;
+	padding: 55px;
+	margin-left: 316px;
+	text-align: left;
+
 }
 
 .button-head {
 	margin: 0;
+	margin-left: 316px;
 	border: none;
 	width: 568px;
-	display: block;
 	padding: 30px 88px; 
 	font-size: 21px;
 	line-height: 26px;
@@ -414,17 +421,7 @@ img {
 	background-color: var(--basic-darkbrown-bg);
 }
 
-.form-input-blocks {
-	position: absolute;
-	background-color: var(--basic-white);
-	box-sizing: border-box;
-	width: 568px;
-	height: 395px;
-	display: flex;
-	flex-direction: column;
-	align-items:center;
-	box-shadow: 0px 7px 15px;
-}
+
 
 .label-descript {
 	font-weight: 700;
@@ -438,8 +435,15 @@ img {
 	background-color: var(--basic-lightgrey-input-bg);
 	border: none;
 	font-weight: 700;
+	height: 38px;
 	text-transform: uppercase;
 	
+}
+
+.form-input-number {
+	width: 114px;
+	height: 38px;
+	text-align: center;
 }
 
 .form-input:hover {
@@ -460,18 +464,23 @@ img {
 	position: relative;
 }
 
-.form-date-input {
-	position: absolute;
-	top: 7px;
-	right: 9px;
+.date-input {
 	border: none;
 }
 
-.form-date-input:hover svg,
-.form-date-input:focus svg {
+.date-input:hover path,
+.date-input:focus path {
 	fill: var(--basic-black);
 }
 
+.date-input:active path {
+	fill: var(--basic-lightblue);
+	border: none;
+}
+
+.amount-persons-button {
+	border: none;
+}
 
 .form-input-block {
 	margin-bottom: 30px;
@@ -481,30 +490,23 @@ img {
 	box-sizing: border-box;
 }
  
-.form-input-date {
-	position: absolute;
-	right: 8px;
-	top: 6px;
-	margin: 0;
-	padding: 0;
-	background-color: transparent;
-
-}
-
 .amount-persons {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-.submit.submit-form-button {
-	padding-top: 100px;
-	display: block;
+.submit-button {
+	width: 458px;
+	height: 58px;
+	border: none;
+	background-color: var(--basic-lightblue);
+	color: var(--basic-white);
+	text-transform: uppercase;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: 700;
-	width: 458px;
-	height: 58px;
+	margin-bottom: 55px;
 }
 
 /* Footer*/
@@ -515,8 +517,6 @@ img {
 	width: 1200px;
 	height: 120px;
 	background-color:var(--basic-white); 
-	/*display: grid;
-	grid-template-columns: 1fr 1fr 1fr;*/
 }
 
 .footer-contacts {
@@ -619,10 +619,8 @@ img {
 
 .container-price {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
 
 }
 
@@ -633,7 +631,6 @@ img {
 }
 
 .range-filter {
-
 	width: 316px;
 	margin-top: 10px;
 }
@@ -913,8 +910,8 @@ img {
 
 .item-button-detail:active {
 	background-color: var(--basic-darkblue-bg);
-	color: var(--basic-white);
-	opacity: 0.3; /* Не пойму как сделать прозрачными только буквы */
+	color: var(--basic-white-bg-second);
+	
 }
 
 .item-button-reserve:hover,
@@ -924,14 +921,14 @@ img {
 
 .item-button-reserve:active {
 	background-color: var(--basic-darkbrown-bg);
-	color: var(--basic-white);
+	color: var(--basic-white-bg-second);
 }
 
 .item-descript-rating {
 	display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+  	flex-direction: column;
+  	justify-content: space-between;
+  	align-items: flex-end;
 }
 
 
@@ -983,7 +980,10 @@ img {
 	justify-content: space-between;
 	align-items: center;
   	padding: 0 72px;
-	
+}
+
+.sorting a:last-child {
+	margin-right: 0;
 }
 
 .sorting__list span:first-child {
@@ -1002,6 +1002,10 @@ img {
 	line-height: 18px;
 	margin-right: 40px;
 	color: var(--basic-black);
+}
+
+.sorting__list li:last-child {
+	margin: 0;
 }
 
 .sorting__list {

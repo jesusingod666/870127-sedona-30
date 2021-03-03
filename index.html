@@ -160,9 +160,9 @@
 				<h1 class="visually-hidden">Поиск отеля</h1>
 				<h2>Заинтересовались?</h2>
 				<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-				<form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
 					<button class="button-head" tabindex="0">Поиск гостиницы в седоне</button>
 					<div class="form-input-blocks">
+						<form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
 						<div class="arrival-date form-input-block">
 							<label for="arrival-input" class="label-descript">Дата заезда:</label>
 							<input type="text" id="arrival-input" name="arrival-date" placeholder="24 Апреля 2017" class="form-input form-input-date">
@@ -210,29 +210,58 @@
 								<label for="adult" class="label-descript">Взрослые:</label>
 								<button type="button" class="amount-persons-button input-button-minus" id="amount_adult_minus">
 									<span class="visually-hidden">Количество взрослых - понижение</span>
+									<svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="12" height="3" fill="#A9A9A9"/>
+									</svg>
 								</button>
 								<input type="number"  min="1" max="10" name="adult" value="2" id="adult" class="form-input form-input-number">
 								<button type="button" class="amount-persons-button input-button-plus" id="amount_adult_plus">
 									<span class="visually-hidden">Количество взрослых - повышение</span>
+									<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+									</svg>
 								</button>
 							</div>
 							<div class="amount-persons-block">
 								<label for="children" class="label-descript">Дети:</label>
 								<button type="button" class="amount-persons-button input-button-minus" id="amount_children_minus">
 									<span class="visually-hidden">Количество детей - понижение</span>
+									<svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="12" height="3" fill="#A9A9A9"/>
+									</svg>
 								</button>
 								<input type="number" min="0" max="10" name="children" value="0" id="children" class="form-input form-input-number">
 								<button type="button" class="amount-persons-button input-button-plus" id="amount_children_plus">
 									<span class="visually-hidden">Количество детей - повышение</span>
+									<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+									</svg>
 								</button>
 							</div>
 						</div>
 						<div class="submit">
 							<button type="button" class="submit-button">Найти</button>
 						</div>
+					</form>	
 					</div>
-				</form>	
 			</section>
+			<!--<section class="interested">
+				<div class="interested__container">
+					<span>Заинтересовались?</span>
+					<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+				</div>
+				<div class="search-from-container">
+					<button>
+						Поиск гостиницы в Седоне
+					</button>
+					<form class="search__form" action="" method="POST">
+						<div>
+							<label></label>
+							<input type="text" class="date__filed" name="date__in" id="date__in" placeholder="24 апреля 2017" required>
+						</div>
+					</form>
+				</div>
+			</section>-->
 			<section>
 				<img src="img/map.png" width="1199" height="594" alt="Карта">
 			</section>
