@@ -86,83 +86,13 @@
 					</ul>
 				</div>
 			</section>
-				<!--<section class="title-text">
-						<h1>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
-						<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-				</section>
-				<section class="real-city">
-					<div class="real-city-text">
-						<p class="real-city-title">Настоящий<br>городок</p>
-						<p class="real-city-descript">— №1 —</p>
-						<p class="real-city-descript">Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
-					</div>
-					<div class="real-city-img">
-						<img src="img/image.jpg" width="800" height="256" alt="Фото бунгало">
-					</div>	
-				</section>
-				<section class="features-white">
-					<div class="container">
-						<ul class="features-list">
-							<li class="features-item">	
-								<img src="img/icon-1.svg" width="75" height="72" alt="Лого Жильё">
-								<p class="title">Жильё</p>
-								<p class="descript-text">Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
-							</li>
-							<li class="features-item">
-								<img src="img/icon-3.svg" width="75" height="70" alt="Лого Еда">
-								<p class="title">Еда</p>
-								<p class="descript-text">Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
-							</li>
-							<li class="features-item">
-								<img src="img/icon-2.svg" width="64" height="77" alt="Лого Сувениры">
-								<p class="title">Сувениры</p>
-								<p class="descript-text">Не только китайского, но и местного<br>производства!</p>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="devil-bridge">
-					<div class="devil-bridge-text">
-						<p class="devil-bridge-title">Там есть Мост дьявола</p>
-						<p class="devil-bridge-descript">— №2 —</p>
-						<p class="devil-bridge-descript">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
-					</div>
-					<div class="devil-bridge-img">
-						<img src="img/image_canion.jpg" width="800" height="256" alt="">
-					</div>
-				</section>
-				<section class="features-grey">
-					<div class="container-grey">
-						<ul class="features-list-grey">
-							<li class="features-item-grey">
-								<p class="title-grey">небольшая<br>площадь</p>
-								<p class="descript-text-grey">— №3 —</p>
-								<p class="descript-text-grey">все достопримечательности<br>находятся очень близко</p>
-							</li>
-						</ul>
-						<ul class="features-list-grey">
-							<li class="features-item-grey">
-								<p class="title-grey">красивая дорога</p>
-								<p class="descript-text-grey">— №4 —</p>
-								<p class="descript-text-grey">ехать в седону из лас-вегаса совсем<br> не скучно!</p>
-							</li>
-						</ul>
-						<ul class="features-list-grey">
-							<li class="features-item-grey">
-								<p class="title-grey">мало<br>туристов</p>
-								<p class="descript-text-grey">— №5 —</p>
-								<p class="descript-text-grey">большинство едет в гранд каньон<br>и толпится там</p>
-							</li>
-						</ul>
-					</div>
-				</section>-->
 			<section class="search-block">
 				<h1 class="visually-hidden">Поиск отеля</h1>
-				<h2>Заинтересовались?</h2>
+				<span>Заинтересовались?</span>
 				<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-					<button class="button-head" tabindex="0">Поиск гостиницы в седоне</button>
-					<div class="form-input-blocks">
-						<form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
+				<button class="button-head" tabindex="0">Поиск гостиницы в седоне</button>
+				<div class="form-input-blocks">
+					<form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
 						<div class="arrival-date form-input-block">
 							<label for="arrival-input" class="label-descript">Дата заезда:</label>
 							<input type="text" id="arrival-input" name="arrival-date" placeholder="24 Апреля 2017" class="form-input form-input-date">
@@ -208,60 +138,47 @@
 						<div class="amount-persons form-input-block">
 							<div class="amount-persons-block">
 								<label for="adult" class="label-descript">Взрослые:</label>
-								<button type="button" class="amount-persons-button input-button-minus" id="amount_adult_minus">
-									<span class="visually-hidden">Количество взрослых - понижение</span>
-									<svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect width="12" height="3" fill="#A9A9A9"/>
-									</svg>
-								</button>
-								<input type="number"  min="1" max="10" name="adult" value="2" id="adult" class="form-input form-input-number">
-								<button type="button" class="amount-persons-button input-button-plus" id="amount_adult_plus">
-									<span class="visually-hidden">Количество взрослых - повышение</span>
-									<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
-									</svg>
-								</button>
+								<div class="amount__container">
+									<button type="button" class="amount-persons-button input-button-minus" id="amount_adult_minus">
+										<span class="visually-hidden">Количество взрослых - понижение</span>
+										<svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="12" height="3" fill="#A9A9A9"/>
+										</svg>
+									</button>
+									<input type="text"  min="1" max="10" name="adult" value="2" id="adult" class="form-input form-input-number">
+									<button type="button" class="amount-persons-button input-button-plus" id="amount_adult_plus">
+										<span class="visually-hidden">Количество взрослых - повышение</span>
+										<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+										</svg>
+									</button>
+								</div>
 							</div>
 							<div class="amount-persons-block">
 								<label for="children" class="label-descript">Дети:</label>
-								<button type="button" class="amount-persons-button input-button-minus" id="amount_children_minus">
-									<span class="visually-hidden">Количество детей - понижение</span>
-									<svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect width="12" height="3" fill="#A9A9A9"/>
-									</svg>
-								</button>
-								<input type="number" min="0" max="10" name="children" value="0" id="children" class="form-input form-input-number">
-								<button type="button" class="amount-persons-button input-button-plus" id="amount_children_plus">
-									<span class="visually-hidden">Количество детей - повышение</span>
-									<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
-									</svg>
-								</button>
+								<div class="amount__container">
+									<button type="button" class="amount-persons-button input-button-minus" id="amount_children_minus">
+										<span class="visually-hidden">Количество детей - понижение</span>
+										<svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="12" height="3" fill="#A9A9A9"/>
+										</svg>
+									</button>
+									<input type="text" min="0" max="10" name="children" value="0" id="children" class="form-input form-input-number">
+									<button type="button" class="amount-persons-button input-button-plus" id="amount_children_plus">
+										<span class="visually-hidden">Количество детей - повышение</span>
+										<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
+										</svg>
+									</button>
+								</div>
 							</div>
 						</div>
 						<div class="submit">
 							<button type="button" class="submit-button">Найти</button>
 						</div>
 					</form>	
-					</div>
+				</div>
 			</section>
-			<!--<section class="interested">
-				<div class="interested__container">
-					<span>Заинтересовались?</span>
-					<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-				</div>
-				<div class="search-from-container">
-					<button>
-						Поиск гостиницы в Седоне
-					</button>
-					<form class="search__form" action="" method="POST">
-						<div>
-							<label></label>
-							<input type="text" class="date__filed" name="date__in" id="date__in" placeholder="24 апреля 2017" required>
-						</div>
-					</form>
-				</div>
-			</section>-->
 			<section>
 				<img src="img/map.png" width="1199" height="594" alt="Карта">
 			</section>
