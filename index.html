@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="icon" href="favicon.ico">
   </head>
@@ -94,7 +94,7 @@
 				<div class="form-input-blocks">
 					<form action="https://echo.htmlacademy.ru" method="POST" class="search-form">
 						<div class="arrival-date form-input-block">
-							<label for="arrival-input" class="label-descript">Дата заезда:</label>
+							<label for="arrival-input" class="label-descript label-descript-arrival">Дата заезда:</label>
 							<input type="text" id="arrival-input" name="arrival-date" placeholder="24 Апреля 2017" class="form-input form-input-date">
 							<button type="button" class="date-input">
 								<span class="visually-hidden">Выбрать дату</span>
@@ -115,7 +115,7 @@
 							</button>
 						</div>
 						<div class="departure-date form-input-block">
-							<label for="departure-input" class="label-descript">Дата выезда:</label>
+							<label for="departure-input" class="label-descript label-descript-departure">Дата выезда:</label>
 							<input type="text"  id="departure-input" name="departure-date" placeholder="4 июля 2017" class="form-input form-input-date">
 							<button type="button" class="date-input">
 								<span class="visually-hidden">Выбрать дату</span>
@@ -137,7 +137,7 @@
 						</div>
 						<div class="amount-persons form-input-block">
 							<div class="amount-persons-block">
-								<label for="adult" class="label-descript">Взрослые:</label>
+								<label for="adult" class="label-descript label-descript-adult">Взрослые:</label>
 								<div class="amount__container">
 									<button type="button" class="amount-persons-button input-button-minus" id="amount_adult_minus">
 										<span class="visually-hidden">Количество взрослых - понижение</span>
@@ -145,7 +145,7 @@
 											<rect width="12" height="3" fill="#A9A9A9"/>
 										</svg>
 									</button>
-									<input type="text"  min="1" max="10" name="adult" value="2" id="adult" class="form-input form-input-number">
+									<input type="text" name="adult" value="2" id="adult" class="form-input form-input-number">
 									<button type="button" class="amount-persons-button input-button-plus" id="amount_adult_plus">
 										<span class="visually-hidden">Количество взрослых - повышение</span>
 										<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@
 								</div>
 							</div>
 							<div class="amount-persons-block">
-								<label for="children" class="label-descript">Дети:</label>
+								<label for="children" class="label-descript label-descript-kids">Дети:</label>
 								<div class="amount__container">
 									<button type="button" class="amount-persons-button input-button-minus" id="amount_children_minus">
 										<span class="visually-hidden">Количество детей - понижение</span>
@@ -163,7 +163,7 @@
 											<rect width="12" height="3" fill="#A9A9A9"/>
 										</svg>
 									</button>
-									<input type="text" min="0" max="10" name="children" value="0" id="children" class="form-input form-input-number">
+									<input type="text" name="children" value="0" id="children" class="form-input form-input-number">
 									<button type="button" class="amount-persons-button input-button-plus" id="amount_children_plus">
 										<span class="visually-hidden">Количество детей - повышение</span>
 										<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -280,5 +280,6 @@
 			</a>
 		</section>
 		</footer>
+		<script src="js/script.js"></script>
 	</body>
 </html>
