@@ -138,7 +138,7 @@ img {
 }
 
 .title-text p {
-    font-size: 70px;
+    font-size: 14px;
     line-height: 26px;
     text-align: center;
     margin-top: 43px;
@@ -227,6 +227,7 @@ img {
     font-weight: 700;
     font-size: 21px;
     line-height: 21px;
+    text-align: center;
 }
 
 
@@ -259,6 +260,7 @@ img {
     font-size: 30px;
     line-height: 24px;
     margin: 0 0 24px;
+    padding-right: 9px;
     font-weight: 700;
     text-align: center;
 }
@@ -266,6 +268,7 @@ img {
 .search-block p {
     margin: 0 auto 47px;
     padding: 0;
+    padding-top: 9px;
     font-size: 14px;
     line-height: 24px;
     text-align: center;
@@ -279,7 +282,7 @@ img {
     height: 395px;
     box-shadow: 0px 7px 15px;
     padding: 55px;
-    transform: translate(-50%, 90px);
+    transform: translate(-50%, 80px);
 }
 
 .button-head {
@@ -471,7 +474,17 @@ img {
     justify-content: space-around;
     width: 1200px;
     height: 120px;
-    background-color: var(--basic-white);
+    background-color: var(--basic-white-bg);
+    margin-top: -126px;
+    position: relative;
+}
+
+.catalog-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    height: 120px;
+    background-color: var(--basic-white-bg);
 }
 
 .footer-contacts {
@@ -775,7 +788,7 @@ img {
     line-height: 21px;
     font-weight: 700;
     color: var(--basic-white);
-    padding-top: 7.5px;
+    padding-top: 25px;
 }
 
 .infrastructure legend,
@@ -810,7 +823,6 @@ img {
 .hotel-img {
     width: 135px;
     height: 90px;
-    overflow: hidden;
     margin-right: 29px;
 }
 
@@ -834,7 +846,7 @@ img {
 
 .item-head {
     display: block;
-    margin: -5px 0 0;
+    margin: -19px 19px;
     padding: 0;
     font-size: 21px;
     line-height: 26px;
@@ -866,7 +878,7 @@ img {
 }
 
 .item-descript-block p {
-    margin: 0 0 12px;
+    margin: 0 19px 28px;
 }
 
 .item-button {
@@ -909,6 +921,7 @@ img {
 
 .item-descript-rating {
     display: flex;
+    margin: -13px 0 13px 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
@@ -964,12 +977,13 @@ img {
     padding: 0 72px;
 }
 
-.sorting a:last-child {
+.sorting a:last-child {.item-head
     margin-right: 0;
 }
 
 .sorting__list span:first-child {
     margin: 0;
+    padding: 0 2px 25px 0;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -979,6 +993,7 @@ img {
 
 .sorting__list span:nth-of-type(2) {
     margin: 0;
+    padding: 0 0 32px 0;
     font-size: 12px;
     line-height: 18px;
     margin-right: 40px;
