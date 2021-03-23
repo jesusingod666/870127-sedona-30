@@ -49,7 +49,7 @@
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 /*Main navigation*/
@@ -182,7 +182,7 @@ img {
 .features {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 256px 330px 256px 256px;
+    /* grid-template-rows: 256px 330px 256px 256px; */
     margin: 0;
     padding: 0;
     list-style: none;
@@ -232,6 +232,7 @@ img {
 
 .features__item--white {
     background-color: var(--basic-white);
+    min-height: 320px;
 }
 
 .features__item--white::before {
@@ -240,18 +241,25 @@ img {
 
 .features__item--white:nth-of-type(3)::before {
     content: url(../img/icon-1.svg);
+    position: relative;
+    bottom: 23px;
 }
 
 .features__item--white:nth-of-type(4)::before {
     content: url(../img/icon-3.svg);
+    position: relative;
+    bottom: 23px;
 }
 
 .features__item--white:nth-of-type(5)::before {
     content: url(../img/icon-2.svg);
+    position: relative;
+    bottom: 26px;
 }
 
 .features__item--grey {
     background-color: var(--basic-lightgrey-bg);
+    min-height: 246px;
 }
 
 .container .title {
@@ -259,6 +267,11 @@ img {
     font-size: 21px;
     line-height: 21px;
     text-align: center;
+}
+
+.picture {
+    background-color: var(--basic-brown-bg);
+    display: flex;
 }
 
 .real-city {
@@ -341,6 +354,7 @@ img {
     font-weight: 700;
     color: var(--basic-white);
     background-color: var(--basic-brown-bg);
+    cursor: pointer;
 }
 
 .button-head:hover,
@@ -405,7 +419,7 @@ img {
 
 .form-input:focus {
     background-color: var(--basic-white);
-    border: 2px solid var(--basic-outline-input);
+    outline: 2px solid var(--basic-outline-input);
 }
 
 .form-input::placeholder {
@@ -429,6 +443,7 @@ img {
     min-height: 38px;
     border: none;
     background-color: var(--basic-lightgrey-input-bg);
+    cursor: pointer;
 }
 
 .date-input:hover path,
@@ -465,6 +480,7 @@ img {
     background-color: var(--basic-lightgrey-input-bg);
     width: 39px;
     min-height: 38px;
+    cursor: pointer;
 }
 
 .form-input-block {
@@ -506,6 +522,7 @@ img {
     line-height: 26px;
     font-weight: 700;
     margin-top: 55px;
+    cursor: pointer;
 }
 
 .submit-button:hover,
@@ -781,6 +798,7 @@ img {
     width: 137px;
     min-height: 36px;
     justify-self: center;
+    cursor: pointer;
 }
 
 .submit__button:hover,
@@ -796,7 +814,7 @@ img {
     background-image: url("../img/background_catalog.jpg");
     background-color: var(--basic-halfdarkbrown-bg);
     background-repeat: no-repeat;
-    background-size: 1200px 217px;
+    background-size: cover;
     min-height: 217px;
     list-style: none;
     padding: 0 72px;
@@ -871,12 +889,6 @@ img {
 
 .filter-input:checked + label::before {
     content: none;
-}
-
-.filter-input:focus {
-    outline: 2px solid springgreen;
-    width: 23px;
-    height: 23px;
 }
 
 .checkbox-container {
